@@ -1,4 +1,14 @@
 <?php
+    // DEFINIZIONE CLASSE "MOVIE"
+    class Movie {
+        // PROPRIETA - ATTRIBUTI
+        public $title;
+        public $genre;
+        public $releaseYear;
+        public $originalLanguage;
+        public $productionCountry;
+        public $duration;
+    }
 
 ?>
 
