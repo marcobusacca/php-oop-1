@@ -20,6 +20,7 @@ BONUS 1 :
     Modificare la classe Movie in modo che accetti piú di un genere.
 
 BONUS 2 :
+    
     Creare un layout completo per stampare a schermo una lista di movies. 
 
     Facciamo attenzione all’organizzazione del codice, suddividendolo in appositi file e cartelle. 
