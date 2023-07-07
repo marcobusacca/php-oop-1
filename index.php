@@ -12,14 +12,19 @@
         // METODI
     
             // COSTRUTTORE
-            function __construct($title, $genre, $releaseYear, $originalLanguage, $productionCountry, $duration){
+            function __construct($genre, $releaseYear, $originalLanguage, $productionCountry, $duration){
     
-                $this->title = $title;
                 $this->genre = $genre;
                 $this->releaseYear = $releaseYear;
                 $this->originalLanguage = $originalLanguage;
                 $this->productionCountry = $productionCountry;
                 $this->duration = $duration;
+            }
+
+            // FUNZIONI
+            public function setTitle($title){
+                // TRASFORMO IL TITOLO IN UPPER_CASE
+                $this->title = strtoupper($title);
             }
         // FINE METODI
     }
