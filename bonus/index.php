@@ -3,7 +3,7 @@
     class Movie {
         // PROPRIETA - ATTRIBUTI
         public $title;
-        public $genre;
+        public $genres;
         public $releaseYear;
         public $originalLanguage;
         public $productionCountry;
@@ -12,9 +12,9 @@
         // METODI
     
             // COSTRUTTORE
-            function __construct($genre, $releaseYear, $originalLanguage, $productionCountry, $duration){
+            function __construct($genres, $releaseYear, $originalLanguage, $productionCountry, $duration){
     
-                $this->genre = $genre;
+                $this->genres = $genres;
                 $this->releaseYear = $releaseYear;
                 $this->originalLanguage = $originalLanguage;
                 $this->productionCountry = $productionCountry;
@@ -30,9 +30,9 @@
     }
 
     // CREO LE ISTANZE / OGGETTI DELLA CLASSE "MOVIE"
-    $backToTheFuture = new Movie('Science Fiction', '1985', 'English', 'USA', 92);
-    $backToTheFuture2 = new Movie('Science Fiction', '1989', 'English', 'USA', 108);
-    $backToTheFuture3 = new Movie('Science Fiction', '1990', 'English', 'USA', 118);
+    $backToTheFuture = new Movie(['Adventure', 'Comedy', 'Science Fiction'], '1985', 'English', 'USA', 92);
+    $backToTheFuture2 = new Movie(['Adventure', 'Comedy', 'Science Fiction'], '1989', 'English', 'USA', 108);
+    $backToTheFuture3 = new Movie(['Adventure', 'Comedy', 'Science Fiction'], '1990', 'English', 'USA', 118);
 
     // ASSEGNAZIONE VALORE DELLA PROPRIETA "TITLE" TRAMITE LA FUNZIONE "SET_TITLE"
     $backToTheFuture->setTitle('Back to the Future');
@@ -75,7 +75,18 @@
                                             <?php echo "Genere: " ?>
                                         </strong>
                                         <span>
-                                            <?php echo $backToTheFuture->genre ?>
+                                            <?php for($i = 0; $i < count($backToTheFuture->genres); $i++){
+
+                                                if($i === count($backToTheFuture->genres) - 1){
+
+                                                    echo $backToTheFuture->genres[$i];
+
+                                                } else{
+
+                                                    echo $backToTheFuture->genres[$i].", ";
+                                                }
+                                            }
+                                            ?>
                                         </span>
                                     </li>
                                     <li class="my-5">
@@ -132,7 +143,18 @@
                                             <?php echo "Genere: " ?>
                                         </strong>
                                         <span>
-                                            <?php echo $backToTheFuture2->genre ?>
+                                            <?php for($i = 0; $i < count($backToTheFuture2->genres); $i++){
+
+                                                if($i === count($backToTheFuture2->genres) - 1){
+
+                                                    echo $backToTheFuture2->genres[$i];
+
+                                                } else{
+
+                                                    echo $backToTheFuture2->genres[$i].", ";
+                                                }
+                                            }
+                                            ?>
                                         </span>
                                     </li>
                                     <li class="my-5">
@@ -189,7 +211,18 @@
                                             <?php echo "Genere: " ?>
                                         </strong>
                                         <span>
-                                            <?php echo $backToTheFuture3->genre ?>
+                                            <?php for($i = 0; $i < count($backToTheFuture3->genres); $i++){
+
+                                                if($i === count($backToTheFuture3->genres) - 1){
+
+                                                    echo $backToTheFuture3->genres[$i];
+
+                                                } else{
+
+                                                    echo $backToTheFuture3->genres[$i].", ";
+                                                }
+                                            }
+                                            ?>
                                         </span>
                                     </li>
                                     <li class="my-5">
