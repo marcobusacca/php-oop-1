@@ -8,21 +8,21 @@
         public $originalLanguage;
         public $productionCountry;
         public $duration;
+
+        // METODI
+    
+            // COSTRUTTORE
+            function __construct($title, $genre, $releaseYear, $originalLanguage, $productionCountry, $duration){
+    
+                $this->title = $title;
+                $this->genre = $genre;
+                $this->releaseYear = $releaseYear;
+                $this->originalLanguage = $originalLanguage;
+                $this->productionCountry = $productionCountry;
+                $this->duration = $duration;
+            }
+        // FINE METODI
     }
-
-    // METODI
-
-        // COSTRUTTORE
-        function __construct($title, $genre, $releaseYear, $originalLanguage, $productionCountry, $duration){
-
-            $this->title = $title;
-            $this->genre = $genre;
-            $this->releaseYear = $releaseYear;
-            $this->originalLanguage = $originalLanguage;
-            $this->productionCountry = $productionCountry;
-            $this->duration = $duration;
-        }
-    // FINE METODI
 ?>
 
 <!DOCTYPE html>
